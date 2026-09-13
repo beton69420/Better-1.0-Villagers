@@ -44,25 +44,108 @@ Phase 2 focuses on making villagers behave more naturally around their village a
 - SPC compatibility confirmed
 - WorldEdit compatibility confirmed
 
-#### Phase 2.1 — Shelter Traffic & Building AI 🔧
+#### Phase 2.1 — Advanced Village & Building AI 🔧
 
-Phase 2.1 is a major polish pass for shelter navigation, crowded entrances, doors, and larger buildings.
+Phase 2.1 is a major polish and intelligence update focused on villager traffic, doors, large buildings, multi-room navigation, and more reliable shelter behavior.
 
-Already implemented or being refined:
+Because the scope became much larger during testing, Phase 2.1 is being developed in three sub-phases.
 
-- Faster night and rain shelter navigation
-- Reduced unnecessary circling around houses
-- Villagers commit more reliably to their selected shelter
-- Improved waiting behavior around busy entrances
-- Better double-door support
-- Villagers can use both sides of double-door entrances
-- Major reduction in repeated door opening/closing sounds
-- Improved coordination between villagers using the same entrance
-- More reliable automatic door closing after traffic clears
-- Better support for large and multi-room buildings
-- Villagers should leave large buildings properly during daytime
-- Villagers should spread around the inside of houses instead of packing into one area
-- Improved entrance queueing to reduce villagers pushing and cramming together
-- All large-building improvements are designed to work generically and are not hardcoded for one specific world or building
+---
 
-Phase 2.1 is currently undergoing final testing and bug fixes before being marked stable.
+### Phase 2.1A — Traffic & Door Reliability ✅
+
+Phase 2.1A focuses on making villagers move through entrances more naturally and reliably.
+
+Implemented:
+
+- Improved villager entrance queueing
+- Villagers wait more respectfully instead of heavily cramming into doors
+- Better single-door traffic flow
+- Improved double-door traffic
+- Double doors behave as two independent traffic lanes
+- One double-door leaf can remain open while the other stays closed
+- Villagers only open the door leaf they actually need
+- Player-opened door leaves remain player-controlled
+- Villager-managed door leaves are tracked separately
+- Villager-managed door ownership can recover after world reloads
+- Reduced unnecessary repeated door opening and closing
+- Major reduction in door sound spam
+- Improved handling of mirrored double-door states
+- Villagers detect doors that are physically unreachable
+- Doors blocked by fences, walls, solid blocks, or inaccessible terrain are rejected
+- Villagers can choose an alternative reachable entrance
+- Temporary crowding is not mistaken for permanent structural blockage
+- Short-lived unreachable-door information can expire if the player changes the building
+- Villager-vs-villager movement deadlocks are detected
+- One villager can briefly yield so both villagers can continue moving
+- Improved narrow-path and head-on traffic behavior
+- Better angled approaches to entrances
+- Door-closing failsafes for mod-managed doors
+- Existing Phase 1 and Phase 2 behavior remains compatible
+- SPC compatibility preserved
+- WorldEdit compatibility preserved
+
+Live testing has confirmed much more natural shelter queues, including large groups of villagers entering houses without the heavy pushing and cramming seen previously.
+
+A small daytime door-closing polish is currently being finalized so the last villager closes a managed door shortly after safely clearing the entrance.
+
+---
+
+### Phase 2.1B — Building & Interior Intelligence 🚧
+
+Phase 2.1B will focus on teaching villagers how to navigate and use larger and more complicated buildings.
+
+Planned features:
+
+- Better support for multi-room buildings
+- Villagers understand that internal doors are not necessarily exterior exits
+- Persistent building-exit behavior during clear daytime
+- Villagers sheltered deep inside a building will continue navigating until they actually reach outdoors
+- Normal daytime wandering will not interrupt building egress
+- Better indoor population distribution
+- Villagers spread around large interiors instead of crowding into one room or corner
+- Doorways, hallways, and staircases are avoided as permanent idle locations
+- Support for multi-story buildings
+- Support for basements and underground rooms
+- Detection of reachable interior floors
+- Villagers can travel between floors using valid paths
+- Population is distributed between floors based on usable space and crowding
+- Small populations will not be unnecessarily spread across every floor
+- Additional floors become populated only when the building population is large enough to benefit from them
+- Large populations can distribute across multiple floors and basements
+- Lightweight floor-capacity and reservation logic
+- Better staircase traffic
+- Villagers gradually leave upper floors and basements when shelter is no longer needed
+- Staggered morning exits to reduce traffic jams
+
+The system will be designed generically for vanilla structures and player-built houses rather than being hardcoded for any specific test world or mansion.
+
+---
+
+### Phase 2.1C — Regression, Optimization & Stabilization ⏳
+
+Phase 2.1C will be the final stabilization pass before Phase 2.1 is considered complete.
+
+Planned work:
+
+- Full regression testing of Phase 1, Phase 2, Phase 2.1A, and Phase 2.1B
+- Repeated day/night/rain/clear-weather testing
+- 2, 5, 10, 20, and 30-villager stress tests
+- Single-door traffic tests
+- Double-door traffic tests
+- Blocked and unreachable entrance tests
+- Multi-room building tests
+- Multi-story building tests
+- Basement tests
+- Large custom-building stress tests
+- Reservation and temporary-state cleanup
+- Door ownership cleanup
+- Performance checks
+- Reduced unnecessary pathfinding and repeated building scans
+- SPC regression testing
+- WorldEdit regression testing
+- Existing-world compatibility testing
+- Final documentation cleanup
+- Final manual gameplay verification
+
+Phase 2.1 will only be marked stable after automated testing and real gameplay testing both pass.
