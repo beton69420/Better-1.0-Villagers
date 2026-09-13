@@ -91,7 +91,7 @@ A small daytime door-closing polish is currently being finalized so the last vil
 
 ---
 
-### Phase 2.1B — Building & Interior Intelligence 🚧
+### Phase 2.1B — Building & Interior Intelligence
 
 Phase 2.1B will focus on teaching villagers how to navigate and use larger and more complicated buildings.
 
@@ -122,7 +122,7 @@ The system will be designed generically for vanilla structures and player-built 
 
 ---
 
-### Phase 2.1C — Regression, Optimization & Stabilization ⏳
+### Phase 2.1C — Regression, Optimization & Stabilization
 
 Phase 2.1C will be the final stabilization pass before Phase 2.1 is considered complete.
 
