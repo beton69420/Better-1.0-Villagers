@@ -247,3 +247,31 @@ Possible SPC-integrated village tools:
 - Newly generated village areas automatically recognized by Better 1.0 Villagers
 
 This feature is planned for the future and is not part of the current Phase 2.1 development.
+
+## Legacy Single Player Commands Support
+
+Better 1.0 Villagers is developed and tested alongside Single Player Commands on Minecraft Java Edition 1.0.0.
+
+Installing SPC on Minecraft 1.0 can be difficult on modern systems and launchers. During development, a working modern installation method was created and tested on current macOS hardware.
+
+A future companion tool is planned to make this setup reproducible for other players.
+
+### Planned SPC 1.0 Setup Helper
+
+Goals include:
+
+- Easy installation of SPC into Minecraft Java Edition 1.0.0
+- Windows and macOS support
+- Prism Launcher support
+- MultiMC-compatible launcher support
+- Support for standard/manual Minecraft 1.0 instances
+- Automatic Minecraft version verification
+- Automatic backups before modification
+- Safe uninstall/restore support
+- No modification of saved worlds
+- Clear compatibility and troubleshooting information
+- Manual installation fallback for unsupported launchers
+
+The tool will reproduce the installation method already proven during Better 1.0 Villagers development rather than relying on outdated legacy installation tutorials.
+
+SPC itself will only be redistributed if its original license permits it. Otherwise, users will provide a compatible SPC archive and the helper will perform the installation.
