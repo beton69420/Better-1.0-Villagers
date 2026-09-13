@@ -149,3 +149,101 @@ Planned work:
 - Final manual gameplay verification
 
 Phase 2.1 will only be marked stable after automated testing and real gameplay testing both pass.
+
+## Future Development Roadmap
+
+### Phase 3 — Social & Danger Awareness
+
+Phase 3 will make villagers feel more aware of each other and their surroundings while keeping the classic Minecraft 1.0 style.
+
+Planned features include:
+
+- Lightweight villager social behavior
+- Small natural villager groups
+- Reduced unnecessary isolation
+- Basic danger awareness
+- Better reactions to nearby zombies
+- Better reactions to creepers
+- Fire awareness
+- Lava avoidance
+- Cactus avoidance
+- Dangerous-drop avoidance
+- Simple panic and escape behavior
+- Improved hazard pathfinding
+
+The goal is not to create modern Minecraft villager AI, but to make classic villagers feel less unaware of obvious danger.
+
+---
+
+### Phase 4 — Villager Variety
+
+Phase 4 will improve visual variety while preserving the classic Minecraft 1.0 appearance.
+
+Planned features include:
+
+- More natural distribution of existing villager appearances
+- Preservation of original Minecraft 1.0 profession/appearance IDs
+- Additional classic-style villager varieties where appropriate
+- Low-resolution textures designed to match the original 2011 art style
+- SPC-spawned villager variants remain supported
+
+No modern workstation or profession system will be added.
+
+---
+
+### Phase 5 — Farm Protection & Final v1.0 Polish
+
+Phase 5 will focus on village farms and final release preparation.
+
+Planned features include:
+
+- Villagers avoid trampling farmland
+- Passive mobs avoid unnecessary farmland trampling where practical
+- Player movement does not unintentionally break the mod's farm logic
+- Normal crop growth remains unchanged
+- Normal crop planting and harvesting remain unchanged
+- Water hydration behavior remains unchanged
+- Final compatibility testing
+- Final performance testing
+- Final bug fixes
+- Public v1.0 release preparation
+
+---
+
+## Possible Updates After v1.0
+
+### v1.1 — Village Personality Update
+
+Possible features:
+
+- Lightweight villager personality traits
+- Social villagers
+- Shy villagers
+- Wanderers
+- Homebodies
+- Curious villagers
+- Small differences in preferred wandering behavior
+- House preferences
+- Profession-biased daytime movement
+- More natural idle behavior
+- Improved morning routines
+- Additional villager skins and polish
+
+These personalities would remain lightweight and would not introduce modern villager mechanics.
+
+### v1.2 — Village Expansion Tools
+
+Possible SPC-integrated village tools:
+
+- `/villagegen`
+- Generate a new classic-style village near the player's position
+- Detect an existing village and expand it instead of creating a second overlapping village
+- Terrain-aware building placement
+- Connected roads
+- Safe avoidance of important player structures
+- Village generation preview
+- Confirmation before world changes
+- Undo support
+- Newly generated village areas automatically recognized by Better 1.0 Villagers
+
+This feature is planned for the future and is not part of the current Phase 2.1 development.
